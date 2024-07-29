@@ -26,7 +26,7 @@ const Page = () => {
           <p className="mt-[90px] info text-center text-[30px] text-[#706f6f]">
             Choose from our range of specialists and get the care you need.
           </p>
-          <div className="bluertext mt-[50px] bg-[white]/40 relative z-10 p-[20px] backdrop-blur-[50px] w-[1250px] h-full">
+          <div className="bluertext mt-[50px] bg-[white]/40 relative z-10 p-[20px] backdrop-blur-[50px] w-[1250px] h-full  ">
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2">
               {doctors && doctors.map((doctor) => (
                 <div key={doctor.id}>

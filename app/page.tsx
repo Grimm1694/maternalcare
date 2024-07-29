@@ -3,7 +3,6 @@ import Book from "@/components/book";
 import Books from "@/components/books";
 import { motion } from "framer-motion";
 import FollowerPointerCard from "@/components/exercises";
-import { WalletMultiButton } from "@solana/wallet-adapter-react-ui";
 import { AnimatedBeamDemo } from "@/components/AnibeamCard";
 
 export default function Home() {
@@ -37,14 +36,6 @@ export default function Home() {
           <div className="md:w-3/4 flex flex-col items-center xl:pl-[240px]">
             <AnimatedBeamDemo />
             <div className="flex flex-col items-center text-center py-5">
-              <WalletMultiButton 
-                style={{ 
-                  margin: '0 auto', 
-                  width: 'auto', 
-                  maxWidth: '200px',
-                  padding: '10px 20px' 
-                }} 
-              />
             </div>
           </div>
         </main>

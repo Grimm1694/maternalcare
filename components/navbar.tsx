@@ -5,9 +5,7 @@ issue 2: Once page is scrolled, navbar should be fixed at the top
 
 "use client"
 import React, { useState, useEffect } from 'react';
-import { WalletMultiButton } from '@solana/wallet-adapter-react-ui';
 
-require("@solana/wallet-adapter-react-ui/styles.css");
 
 const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);

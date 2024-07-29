@@ -14,7 +14,7 @@ export default function DocConsultationCard({ doctor }: { doctor: any }) {
 
     return (
         <>
-            <div className="bg-white shadow-lg rounded-lg overflow-hidden transition-transform duration-300 h-[350px] w-[300px] lg:w-[400px] cursor-pointer gap-3" onClick={openModal}>
+            <div className="bg-white shadow-lg rounded-lg overflow-hidden transition-transform duration-300 h-[350px] w-[300px] lg:w-[400px] cursor-pointer" onClick={openModal}>
                 <div className="h-full w-full">
                     <img
                         src={doctor.image}
