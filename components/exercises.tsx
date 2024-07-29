@@ -29,20 +29,30 @@ const exercises = [
 
 const FollowerPointerCard = () => {
   return (
-    <div className="flex justify-center flex-wrap gap-8">
-      {exercises.map((item, index) => (
-        <Card key={index} item={item} />
-      ))}
+    <div>
+      <div className="text-center text-4xl pt-10 pb-10">
+        <p>
+          Some of our recommended exercises during pregnancy
+        </p>
+      </div>
+      <div className="flex justify-center flex-wrap gap-8">
+        {exercises.map((item, index) => (
+          <Card key={index} item={item} />
+        ))}
+      </div>
+      <div className="flex justify-center mt-8">
+
+      </div>
     </div>
   );
 };
 
-const Card = ({ item }: { item: { title: string; description: string; image: string } }) => {
+const Card = ({ item }: { item: { title: string, description: string, image: string } }) => {
   const x = useMotionValue(0);
   const y = useMotionValue(0);
   const ref = React.useRef<HTMLDivElement>(null);
   const [rect, setRect] = useState<DOMRect | null>(null);
-  const [isInside, setIsInside] = useState<boolean>(false);
+  const [isInside, setIsInside] = useState(false);
 
   // Track the rect of the card element
   useLayoutEffect(() => {
@@ -103,7 +113,6 @@ const Card = ({ item }: { item: { title: string; description: string; image: str
         onMouseEnter={handleMouseEnter}
         className="relative p-4 bg-white shadow-md rounded-md w-full max-w-[300px] h-[400px]"
         ref={ref}
-        style={{ cursor: "none" }}
       >
         <AnimatePresence>
           {isInside && <FollowPointer x={x} y={y} title={item.title} isMounted={true} />}
